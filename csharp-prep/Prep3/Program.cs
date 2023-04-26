@@ -9,18 +9,24 @@ class Program
         Console.Write("What is your guess? ");
         int guess = int.Parse(Console.ReadLine());
 
-        if (number > guess)
+        while (number != guess)
         {
-            Console.WriteLine("Higher");
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
 
-        }
-        else if(number < guess)
-        {
-            Console.WriteLine("Lower");
-        }
-        else
-        {
-            Console.WriteLine("You guess it!");
+            if (number > guess)
+            {
+                Console.WriteLine("Higher");
+
+            }
+            else if(number < guess)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You guess it!");
+            }
         }
 
     }
